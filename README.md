@@ -7,7 +7,7 @@ Using Ratatui :)
 `P` pause timer 
 `SPACE` start / pause
 
-![example](./assets/ascreenshot.png)
+![example](./assets/screenshot.png)
 
 ## TODO
 - [ ] Change session duration
