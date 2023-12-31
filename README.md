@@ -3,8 +3,10 @@
 Using Ratatui :)
 
 ## Keys
-`S` start timer 
+`S` start timer
+
 `P` pause timer 
+
 `SPACE` start / pause
 
 ![example](./assets/screenshot.png)
