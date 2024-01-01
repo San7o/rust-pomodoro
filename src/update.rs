@@ -3,6 +3,7 @@ use chrono::Local;
 
 use crate::app::App;
 use crate::resources::State;
+use core::time::Duration;
 
 pub fn update(app: &mut App, key_event: KeyEvent) {
       
@@ -25,6 +26,13 @@ pub fn update(app: &mut App, key_event: KeyEvent) {
                 }
             }
         },
+        KeyCode::Char('+') => {
+            app.session_lenght += Duration::from_secs(60 * 5);
+        },
+        KeyCode::Char('-') => {
+            app.session_lenght -= Duration::from_secs(60 * 5);
+        },
+
         _ => {}
     };
 }

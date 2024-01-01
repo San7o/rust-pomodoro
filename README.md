@@ -9,6 +9,11 @@ Using Ratatui :)
 
 `SPACE` start / pause
 
+`+` make a session 5 minutes longer
+
+`-` make a session 5 minutes shorter
+
+
 ![example](./assets/screenshot.png)
 
 ## TODO

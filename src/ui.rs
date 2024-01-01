@@ -62,12 +62,13 @@ pub fn render(app: &mut App, f: &mut Frame) {
 {}
 Current Time: {}
 Current state: {:?} 
-30 Minutes Session \n 
+{} Minutes Session \n 
 {}
       ",
       ASCII_ART2,
       &Local::now().time().to_string()[..5],
       app.state,
+      app.session_lenght.as_secs_f32() / 60.0,
       end_session_text
     ))
    .block(
