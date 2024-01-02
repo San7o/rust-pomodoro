@@ -39,10 +39,21 @@ impl App {
     pub fn start_timer(&mut self) {
         self.state = State::Running; 
         self.should_stop_at = Some(Local::now().time() + self.session_lenght);
+
+        log::info!("{} session started with mins {}",
+                Local::now().format("%Y-%m-%dT%H:%M:%S"),
+                    self.session_lenght.as_secs_f32() / 60.0
+                );
+
     }
 
     pub fn stop_timer(&mut self) {
         self.state = State::Stopped;
         self.should_stop_at = None;
+
+        log::info!("{} stopped session",
+                    Local::now().format("%Y-%m-%dT%H:%M:%S"),
+                    );
+
     }
 }

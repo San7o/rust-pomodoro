@@ -22,8 +22,33 @@ use event::{Event, EventHandler};
 use ratatui::{backend::CrosstermBackend, Terminal};
 use tui::Tui;
 use update::update;
+use chrono::Local;
+
+// Logger
+
+use log::LevelFilter;
+use log4rs::append::file::FileAppender;
+use log4rs::encode::pattern::PatternEncoder;
+use log4rs::config::{Appender, Config, Root};
 
 fn main() -> Result<()> {
+
+    // Start Logging 
+    let logfile = FileAppender::builder()
+        .encoder(Box::new(PatternEncoder::new("{l} - {m}\n")))
+        .build("log/logs.log")?;
+
+    let config = Config::builder()
+        .appender(Appender::builder().build("logfile", Box::new(logfile)))
+        .build(Root::builder()
+                   .appender("logfile")
+                   .build(LevelFilter::Info))?
+        ;
+
+    log4rs::init_config(config)?;
+
+    log::info!("{} application opened", Local::now().format("%Y-%m-%dT%H:%M:%S"));
+
     // Create an application.
     let mut app = App::new();
 
@@ -49,5 +74,7 @@ fn main() -> Result<()> {
 
     // Exit the user interface.
     tui.exit()?;
+
+    log::info!("{} application closed", Local::now().format("%Y-%m-%dT%H:%M:%S"));
     Ok(())
 }

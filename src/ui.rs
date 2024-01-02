@@ -35,6 +35,11 @@ pub fn render(app: &mut App, f: &mut Frame) {
         if let Some(stop_time) = app.should_stop_at {
             if Local::now().time() > stop_time {
                 app.state = State::Finished;
+
+                log::info!("{} session finished with mins {}",
+                           Local::now().format("%Y-%m-%dT%H:%M:%S"),
+                            app.session_lenght.as_secs_f32() / 60.0
+                           );
             }
         }
     }
