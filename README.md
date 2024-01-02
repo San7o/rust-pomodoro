@@ -17,4 +17,5 @@ Using Ratatui :)
 ![example](./assets/screenshot.png)
 
 ## TODO
-- [ ] Change session duration
+- [x] Change session duration
+- [x] Logs
