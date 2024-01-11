@@ -1,7 +1,7 @@
 # Rusty Pomodoro Timer
 
 Pomodoro timer and logger made with rust and [Ratatui](https://ratatui.rs/).
-All your activities are saved in ledger format, [learn more about ledger here](https://ledger-cli.org/doc/ledger3.html), this makes it easy to analyse all the data of the time yous spent in what activity. You can use all the analysis tools compatible with ledger to get information and statistics about how you spent your time.
+All your activities are saved in ledger format, [learn more about ledger here](https://ledger-cli.org/doc/ledger3.html), this makes it easy to analyse all the data of the time you spent in what activity. You can use all the analysis tools compatible with ledger to get information and statistics about how you spent your time.
 
 ![example](./assets/screenshot.png)
 
