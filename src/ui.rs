@@ -7,6 +7,7 @@ use ratatui::{
 use chrono::Local;
 use crate::resources::State;
 use crate::app::App;
+use crate::activities::ActivityList;
 
 const ASCII_ART: &str = r"
   _____           _           _____                          _                 
@@ -28,8 +29,6 @@ o__,_||||||||||'
 
 pub fn render(app: &mut App, f: &mut Frame) {
     
-
-
     // Check if session is terminated
     if app.state != State::Finished {
         if let Some(stop_time) = app.should_stop_at {
@@ -67,13 +66,16 @@ pub fn render(app: &mut App, f: &mut Frame) {
 {}
 Current Time: {}
 Current state: {:?} 
-{} Minutes Session \n 
+{} Minutes Session \n
+Activity:
+{}\n
 {}
       ",
       ASCII_ART2,
       &Local::now().time().to_string()[..5],
       app.state,
       app.session_lenght.as_secs_f32() / 60.0,
+      app.activities.get(),
       end_session_text
     ))
    .block(

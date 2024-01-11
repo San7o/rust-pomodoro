@@ -16,6 +16,10 @@ pub mod update;
 /// Necessary struct 
 pub mod resources;
 
+pub mod activities;
+
+pub mod ledger;
+
 use app::App;
 use color_eyre::Result;
 use event::{Event, EventHandler};

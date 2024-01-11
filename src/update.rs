@@ -32,7 +32,12 @@ pub fn update(app: &mut App, key_event: KeyEvent) {
         KeyCode::Char('-') => {
             app.session_lenght -= Duration::from_secs(60 * 5);
         },
-
+        KeyCode::Left => {
+            app.activities.prev();
+        },
+        KeyCode::Right => {
+            app.activities.next();
+        },
         _ => {}
     };
 }
