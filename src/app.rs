@@ -4,6 +4,11 @@ use core::time::Duration;
 use crate::activities::ActivityList;
 use crate::ledger::ledger_log;
 
+// File I/O
+use std::fs::File;
+use std::io::{self, BufRead};
+use std::path::Path;
+
 /// Application.
 #[derive(Debug)]
 pub struct App {
@@ -20,10 +25,19 @@ pub struct App {
 
 }
 
+fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
+where P: AsRef<Path>, {
+    let file = File::open(filename)?;
+    Ok(io::BufReader::new(file).lines())
+}
+
 impl App {
     /// Constructs a new instance of [`App`].
     pub fn new() -> Self {
-        
+      
+        let mut activities = Vec::new();
+
+        /*
         let activities = vec![
             "ProgrammingProjects".to_owned(),
                 "ProgrammingProjects:Rust".to_owned(),
@@ -36,6 +50,13 @@ impl App {
                 "Entertainment:Youtube".to_owned(),
                 "Entertainment:Film".to_owned(),
             ];
+        */
+        if let Ok(lines) = read_lines("./activities.txt") {
+            // Consumes the iterator, returns an (Optional) String
+            for line in lines.flatten() {
+                activities.push(line);
+            }
+        }
 
         App {
             should_quit: false,

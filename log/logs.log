@@ -52,3 +52,10 @@ INFO - 2024-01-24T15:40:42 application opened
 INFO - 2024-01-24T15:41:17 session started with mins 30
 INFO - 2024-01-24T16:11:17 session finished with mins 30
 INFO - 2024-01-24T16:15:46 application closed
+INFO - 2024-01-24T16:23:46 application opened
+INFO - 2024-01-24T16:23:51 session started with mins 30
+INFO - 2024-01-24T16:52:52 application opened
+INFO - 2024-01-24T16:52:58 application closed
+INFO - 2024-01-24T16:52:59 application opened
+INFO - 2024-01-24T16:53:00 application closed
+INFO - 2024-01-24T16:53:51 session finished with mins 30

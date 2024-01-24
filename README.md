@@ -25,7 +25,7 @@ ledger -f log/ledger.log register ProgrammingProjects
 >24-Jan-11 ProgrammingProjects:Web  Expenses:ProgrammingProjects:Web   5    35
 ```
 
-You can add more activities by adding new entries to the vector in `src/app.rs`
+You can add more activities by adding new entries to the file `activities.txt`
 
 ## Keys
 
@@ -48,4 +48,4 @@ You can add more activities by adding new entries to the vector in `src/app.rs`
 - [x] Change session duration
 - [x] Logs
 - [x] Advanced statistics
-- [ ] Read activities from file
+- [x] Read activities from file
