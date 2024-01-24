@@ -48,3 +48,4 @@ You can add more activities by adding new entries to the vector in `src/app.rs`
 - [x] Change session duration
 - [x] Logs
 - [x] Advanced statistics
+- [ ] Read activities from file

@@ -31,6 +31,7 @@ impl App {
             "Studying".to_owned(),
                 "Studying:Reti".to_owned(),
                 "Studying:Algorithms".to_owned(),
+                "Studying:IS".to_owned(),
             "Entertainment".to_owned(),
                 "Entertainment:Youtube".to_owned(),
                 "Entertainment:Film".to_owned(),

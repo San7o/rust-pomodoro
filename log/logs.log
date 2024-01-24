@@ -41,3 +41,14 @@ INFO - 2024-01-11T16:03:28 session started with mins 5
 INFO - 2024-01-11T16:03:29 stopped session
 INFO - 2024-01-11T16:03:30 application closed
 INFO - 2024-01-11T16:14:28 application opened
+INFO - 2024-01-11T16:22:28 application closed
+INFO - 2024-01-11T17:41:37 application opened
+INFO - 2024-01-11T17:41:56 session started with mins 120
+INFO - 2024-01-11T19:41:56 session finished with mins 120
+INFO - 2024-01-11T19:42:00 application closed
+INFO - 2024-01-24T15:40:06 application opened
+INFO - 2024-01-24T15:40:17 application closed
+INFO - 2024-01-24T15:40:42 application opened
+INFO - 2024-01-24T15:41:17 session started with mins 30
+INFO - 2024-01-24T16:11:17 session finished with mins 30
+INFO - 2024-01-24T16:15:46 application closed
